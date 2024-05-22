@@ -5,6 +5,8 @@ This repository contains an implementation of a Hybrid Neural Network (HNN) that
 ## Motivating Articles
 J. C. Costa, T. Roxo, H. Proença and P. R. M. Inácio, "How Deep Learning Sees the World: A Survey on Adversarial Attacks & Defenses," in IEEE Access, vol. 12, pp. 61113-61136, 2024, doi: 10.1109/ACCESS.2024.3395118. https://ieeexplore.ieee.org/abstract/document/10510296
 
+F. Nesti, A. Biondi and G. Buttazzo, "Detecting Adversarial Examples by Input Transformations, Defense Perturbations, and Voting," in IEEE Transactions on Neural Networks and Learning Systems, vol. 34, no. 3, pp. 1329-1341, March 2023, doi: 10.1109/TNNLS.2021.3105238. https://ieeexplore.ieee.org/abstract/document/9525033
+
 ## An Adversarial Attack Threat
 Adversarial attacks pose a significant threat to machine learning models, particularly in critical applications such as autonomous vehicles, medical diagnosis, and cybersecurity. These attacks involve crafting malicious inputs that can deceive a model into making incorrect predictions, potentially leading to severe consequences. Therefore, it is crucial to incorporate defenses into models to make them more robust and resilient against adversarial attacks.
 
