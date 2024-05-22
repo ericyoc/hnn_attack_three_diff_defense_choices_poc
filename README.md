@@ -2,6 +2,9 @@
 
 This repository contains an implementation of a Hybrid Neural Network (HNN) that combines a Convolutional Neural Network (CNN) with a Quantum Neural Network (QNN) to classify handwritten digits from the MNIST dataset. The HNN is protected against adversarial attacks using various defense techniques, including input transformation, adversarial training, and randomization.
 
+## Motivating Articles
+J. C. Costa, T. Roxo, H. Proença and P. R. M. Inácio, "How Deep Learning Sees the World: A Survey on Adversarial Attacks & Defenses," in IEEE Access, vol. 12, pp. 61113-61136, 2024, doi: 10.1109/ACCESS.2024.3395118. https://ieeexplore.ieee.org/abstract/document/10510296
+
 ## An Adversarial Attack Threat
 Adversarial attacks pose a significant threat to machine learning models, particularly in critical applications such as autonomous vehicles, medical diagnosis, and cybersecurity. These attacks involve crafting malicious inputs that can deceive a model into making incorrect predictions, potentially leading to severe consequences. Therefore, it is crucial to incorporate defenses into models to make them more robust and resilient against adversarial attacks.
 
