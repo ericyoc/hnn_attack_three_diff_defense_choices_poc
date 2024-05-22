@@ -1,4 +1,4 @@
-# Hybrid Neural Network with Adversarial with Three Defense Choices
+# Hybrid Neural Network with Three Adversarial Defense Choices
 
 This repository contains an implementation of a Hybrid Neural Network (HNN) that combines a Convolutional Neural Network (CNN) with a Quantum Neural Network (QNN) to classify handwritten digits from the MNIST dataset. The HNN is protected against adversarial attacks using various defense techniques, including input transformation, adversarial training, and randomization.
 
