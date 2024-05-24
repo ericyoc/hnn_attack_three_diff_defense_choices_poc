@@ -92,7 +92,7 @@ Therefore, it is crucial to develop and incorporate effective defense mechanisms
 
 This project aims to contribute to the field of adversarial defense by exploring various techniques and providing an implementation of a defended Hybrid Neural Network. By combining classical and quantum computing approaches and incorporating defenses such as input transformation, adversarial training, and randomization, this project seeks to enhance the robustness of machine learning models against adversarial attacks.
 
-## An Adversarial Attack Threat
+## Further Reading: An Adversarial Attack Threat
 Adversarial attacks pose a significant threat to machine learning models, particularly in critical applications such as autonomous vehicles, medical diagnosis, and cybersecurity. These attacks involve crafting malicious inputs that can deceive a model into making incorrect predictions, potentially leading to severe consequences. Therefore, it is crucial to incorporate defenses into models to make them more robust and resilient against adversarial attacks.
 
 This project explores various defense techniques to protect a Hybrid Neural Network (HNN) against adversarial attacks. The HNN combines the strengths of classical and quantum computing by integrating a Convolutional Neural Network (CNN) with a Quantum Neural Network (QNN). The defenses implemented in this project include input transformation, adversarial training, and randomization.
