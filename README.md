@@ -7,6 +7,73 @@ J. C. Costa, T. Roxo, H. Proença and P. R. M. Inácio, "How Deep Learning Sees 
 
 F. Nesti, A. Biondi and G. Buttazzo, "Detecting Adversarial Examples by Input Transformations, Defense Perturbations, and Voting," in IEEE Transactions on Neural Networks and Learning Systems, vol. 34, no. 3, pp. 1329-1341, March 2023, doi: 10.1109/TNNLS.2021.3105238. https://ieeexplore.ieee.org/abstract/document/9525033
 
+## Results for HNN Model with MNIST Dataset 
+
+### Randomization Defense
+
+Randomization defense techniques involve applying random transformations to the input data during training to increase the model's robustness against adversarial attacks. The key idea behind randomization defense is to introduce random variations in the input data, making it harder for adversarial perturbations to have a consistent effect on the model's predictions.
+
+The implemented randomization defense methods work as follows:
+
+- Random Resizing: The input images are randomly resized within a specified scale range. This introduces variations in the spatial dimensions of the images, making the model more resilient to size-related adversarial perturbations.
+- Random Cropping: A random smaller region is cropped from the input images. This helps the model learn to focus on different parts of the image and reduces its sensitivity to specific pixel locations.
+- Random Rotation: The input images are randomly rotated within a specified angle range. This helps the model become invariant to rotational changes and enhances its ability to recognize objects from different orientations.
+- Combined Randomization: Multiple randomization techniques, including resizing, cropping, rotation, color jittering, random erasing, and noise injection, are applied together. This creates a diverse set of input variations, making it challenging for adversarial perturbations to have a consistent impact.
+
+By applying these randomization techniques, the model learns to be more robust and generalizable, as it is trained on a wide range of input variations. Adversarial perturbations that are crafted based on a specific input may not have the same effect when random transformations are applied, reducing the effectiveness of adversarial attacks.
+
+### Randomization Defense Mechanism Using Random Resizing Approach 
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 98.0%           | 6.0%           | 100.0%             |
+| FGSM + PGD       | 100.0%           | 14.0%           | 100.0%             |
+| CW + PGD         | 100.0%           | 98.0%           | 95.0%             |
+
+
+### Randomization Defense Mechanism Using Random Cropping Approach 
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 100.0%           | 14.0%           | 100.0%             |
+| FGSM + PGD       | 100.0%           | 27.0%           | 97.0%             |
+| CW + PGD         | 100.0%           | 98.0%           | 100.0%             |
+
+
+### Randomization Defense Mechanism Using Random Rotation Approach 
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 100.0%           | 11.0%           | 100.0%             |
+| FGSM + PGD       | 100.0%           | 23.0%           | 100.0%             |
+| CW + PGD         | 100.0%           | 98.0%           | 100.0%             |
+
+
+### Randomization Defense Mechanism Using Combined Randomization Approach 
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 100.0%           | 16.0%           | 100.0%             |
+| FGSM + PGD       | 100.0%           | 6.0%           | 100.0%             |
+| CW + PGD         | 100.0%           | 97.0%           | 100.0%             |
+
+
+### Adversarial Training Defense
+
+Adversarial training is a defense technique that involves training the model on a combination of clean examples and adversarial examples generated using various attack methods. By exposing the model to adversarial examples during training, it learns to be more robust and resistant to adversarial perturbations.
+
+
+### Adversarial Training Defense Mechanism
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 98.0%           | 20.0%           | 100.0%             |
+| FGSM + PGD       | 98.0%           | 20.0%           | 98.0%             |
+| CW + PGD         | 100.0%           | 89.0%           | 100.0%             |
+
+
+
+
 ## An Adversarial Attack Threat
 Adversarial attacks pose a significant threat to machine learning models, particularly in critical applications such as autonomous vehicles, medical diagnosis, and cybersecurity. These attacks involve crafting malicious inputs that can deceive a model into making incorrect predictions, potentially leading to severe consequences. Therefore, it is crucial to incorporate defenses into models to make them more robust and resilient against adversarial attacks.
 
