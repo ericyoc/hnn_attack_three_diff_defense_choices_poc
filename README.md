@@ -9,7 +9,7 @@ F. Nesti, A. Biondi and G. Buttazzo, "Detecting Adversarial Examples by Input Tr
 
 ## Results for HNN Model with MNIST Dataset 
 
-### Input Transformation Defense (Pending)
+### Input Transformation Defense (Results Pending)
 Input transformation is a defense technique that aims to preprocess the input data before feeding it into the model. The goal is to make the input more robust and less susceptible to adversarial perturbations. This project implements three input transformation approaches:
 
 1. **Image Quilting:** This technique involves dividing the input image into smaller patches and randomly replacing some of the patches with patches from clean images. The idea is to introduce randomness and break up the adversarial patterns.
