@@ -9,6 +9,15 @@ F. Nesti, A. Biondi and G. Buttazzo, "Detecting Adversarial Examples by Input Tr
 
 ## Results for HNN Model with MNIST Dataset 
 
+### Input Transformation Defense
+Input transformation is a defense technique that aims to preprocess the input data before feeding it into the model. The goal is to make the input more robust and less susceptible to adversarial perturbations. This project implements three input transformation approaches:
+
+1. **Image Quilting:** This technique involves dividing the input image into smaller patches and randomly replacing some of the patches with patches from clean images. The idea is to introduce randomness and break up the adversarial patterns.
+
+2. **Adversarial Logit Pairing:** In this approach, adversarial examples are generated using the Fast Gradient Sign Method (FGSM), and the model is trained to minimize the difference between the logits (pre-softmax outputs) of clean examples and their corresponding adversarial examples. This encourages the model to have similar predictions for clean and adversarial inputs.
+
+3. **Differential Privacy:** Differential privacy is a technique that adds controlled noise to the input data to protect the privacy of individual examples. In the context of adversarial defense, adding noise can help mitigate the impact of adversarial perturbations by making them less effective.
+
 ### Randomization Defense
 
 Randomization defense techniques involve applying random transformations to the input data during training to increase the model's robustness against adversarial attacks. The key idea behind randomization defense is to introduce random variations in the input data, making it harder for adversarial perturbations to have a consistent effect on the model's predictions.
@@ -72,7 +81,16 @@ Adversarial training is a defense technique that involves training the model on 
 | CW + PGD         | 100.0%           | 89.0%           | 100.0%             |
 
 
+## Importance of Adversarial Defense
+Adversarial attacks pose a significant challenge to the reliability and trustworthiness of machine learning models. In real-world applications, the consequences of a model being deceived by adversarial examples can be severe. For example:
 
+- In autonomous vehicles, an adversarial attack could cause the vehicle to misinterpret traffic signs or obstacles, leading to accidents.
+- In medical diagnosis, an adversarial attack could manipulate medical images, causing misdiagnosis and incorrect treatment decisions.
+- In cybersecurity, adversarial attacks could bypass security systems that rely on machine learning, allowing malicious activities to go undetected.
+
+Therefore, it is crucial to develop and incorporate effective defense mechanisms into machine learning models. By making models more robust and resilient against adversarial attacks, we can increase their reliability and trustworthiness, enabling their safe and successful deployment in critical applications.
+
+This project aims to contribute to the field of adversarial defense by exploring various techniques and providing an implementation of a defended Hybrid Neural Network. By combining classical and quantum computing approaches and incorporating defenses such as input transformation, adversarial training, and randomization, this project seeks to enhance the robustness of machine learning models against adversarial attacks.
 
 ## An Adversarial Attack Threat
 Adversarial attacks pose a significant threat to machine learning models, particularly in critical applications such as autonomous vehicles, medical diagnosis, and cybersecurity. These attacks involve crafting malicious inputs that can deceive a model into making incorrect predictions, potentially leading to severe consequences. Therefore, it is crucial to incorporate defenses into models to make them more robust and resilient against adversarial attacks.
@@ -101,42 +119,6 @@ The motivation behind using white-box targeted compounded attacks against classi
 In the case of hybrid neural networks, which combine classical and quantum components, white-box targeted compounded attacks can exploit the unique properties and vulnerabilities introduced by the quantum elements. Attackers may target the quantum circuits or the interface between the classical and quantum components to create adversarial examples that are specifically designed to deceive the hybrid model.
 
 Defending against white-box targeted compounded attacks requires a multi-faceted approach that combines various defense techniques. This project implements defenses such as input transformation, adversarial training, and randomization to enhance the robustness of the hybrid neural network against these powerful attacks.
-
-## Defenses
-
-### Input Transformation
-Input transformation is a defense technique that aims to preprocess the input data before feeding it into the model. The goal is to make the input more robust and less susceptible to adversarial perturbations. This project implements three input transformation approaches:
-
-1. **Image Quilting:** This technique involves dividing the input image into smaller patches and randomly replacing some of the patches with patches from clean images. The idea is to introduce randomness and break up the adversarial patterns.
-
-2. **Adversarial Logit Pairing:** In this approach, adversarial examples are generated using the Fast Gradient Sign Method (FGSM), and the model is trained to minimize the difference between the logits (pre-softmax outputs) of clean examples and their corresponding adversarial examples. This encourages the model to have similar predictions for clean and adversarial inputs.
-
-3. **Differential Privacy:** Differential privacy is a technique that adds controlled noise to the input data to protect the privacy of individual examples. In the context of adversarial defense, adding noise can help mitigate the impact of adversarial perturbations by making them less effective.
-
-### Randomization
-Randomization is a defense technique that introduces random perturbations or transformations to the input data or the model itself. The idea is to make the model's predictions less sensitive to small adversarial perturbations. This project implements several randomization approaches:
-
-1. **Random Resizing and Padding:** The input images are randomly resized and padded before being fed into the model. This introduces spatial variability and makes it harder for adversarial perturbations to have a consistent effect.
-
-2. **Random Cropping:** Random patches are cropped from the input images, reducing the impact of localized adversarial perturbations.
-
-3. **Random Rotation:** The input images are randomly rotated within a certain range, making the model more invariant to rotational changes.
-
-### Adversarial Training
-Adversarial training is a defense technique that involves training the model with adversarial examples alongside clean examples. By exposing the model to adversarial examples during training, it learns to classify them correctly and becomes more robust against adversarial attacks.
-
-In this project, adversarial examples are generated using various attack methods, such as the Fast Gradient Sign Method (FGSM), Projected Gradient Descent (PGD), and Carlini & Wagner (C&W) attack. The model is then trained with a combination of clean and adversarial examples to improve its resilience.
-
-## Importance of Adversarial Defense
-Adversarial attacks pose a significant challenge to the reliability and trustworthiness of machine learning models. In real-world applications, the consequences of a model being deceived by adversarial examples can be severe. For example:
-
-- In autonomous vehicles, an adversarial attack could cause the vehicle to misinterpret traffic signs or obstacles, leading to accidents.
-- In medical diagnosis, an adversarial attack could manipulate medical images, causing misdiagnosis and incorrect treatment decisions.
-- In cybersecurity, adversarial attacks could bypass security systems that rely on machine learning, allowing malicious activities to go undetected.
-
-Therefore, it is crucial to develop and incorporate effective defense mechanisms into machine learning models. By making models more robust and resilient against adversarial attacks, we can increase their reliability and trustworthiness, enabling their safe and successful deployment in critical applications.
-
-This project aims to contribute to the field of adversarial defense by exploring various techniques and providing an implementation of a defended Hybrid Neural Network. By combining classical and quantum computing approaches and incorporating defenses such as input transformation, adversarial training, and randomization, this project seeks to enhance the robustness of machine learning models against adversarial attacks.
 
 ## Disclaimer
 This code is for the purpose of education and research only. 
