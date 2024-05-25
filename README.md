@@ -16,7 +16,7 @@ Input transformation is a defense technique that aims to preprocess the input da
 
 - **Adversarial Logit Pairing:** In this approach, adversarial examples are generated using the Fast Gradient Sign Method (FGSM), and the model is trained to minimize the difference between the logits (pre-softmax outputs) of clean examples and their corresponding adversarial examples. This encourages the model to have similar predictions for clean and adversarial inputs.
 
-- **Differential Privacy:** Differential privacy is a technique that adds controlled noise to the input data to protect the privacy of individual examples. In the context of adversarial defense, adding noise can help mitigate the impact of adversarial perturbations by making them less effective.
+- **Differential Privacy:** A technique that adds controlled noise to the input data to protect the privacy of individual examples. In the context of adversarial defense, adding noise can help mitigate the impact of adversarial perturbations by making them less effective.
 
 
 ### Input Transformation Defense Mechanism Using Image Quilting Approach 
