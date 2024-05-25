@@ -18,6 +18,14 @@ Input transformation is a defense technique that aims to preprocess the input da
 
 3. **Differential Privacy:** Differential privacy is a technique that adds controlled noise to the input data to protect the privacy of individual examples. In the context of adversarial defense, adding noise can help mitigate the impact of adversarial perturbations by making them less effective.
 
+### Input Transformation Defense Mechanism Using Image Quilting Approach 
+
+| **Compounded Attack** | **Pre-Attack Accuracy - No Defense** | **Post Attack Accuracy - No Defense** | **Post Attack Accuracy - with Defense** |
+|------------------|------------------|------------------|--------------------|
+| FGSM + CW        | 100.0%           | 22.0%           | 100.0%             |
+| FGSM + PGD       | 100.0%           | 23.0%           | 100.0%             |
+| CW + PGD         | 100.0%           | 98.0%           | 100.0%             |
+
 ### Randomization Defense
 
 Randomization defense techniques involve applying random transformations to the input data during training to increase the model's robustness against adversarial attacks. The key idea behind randomization defense is to introduce random variations in the input data, making it harder for adversarial perturbations to have a consistent effect on the model's predictions.
